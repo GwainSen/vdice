@@ -5,8 +5,8 @@ fn greet(name: &str) -> String {
 }
 
 #[tauri::command]
-fn custom_console_log(){
-    println!("command did shit");
+fn custom_console_log(msg: String){
+    println!("{}",msg);
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
