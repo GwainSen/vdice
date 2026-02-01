@@ -11,11 +11,11 @@
 </script>
 
 <div class="card preset-outlined-primary-500 h-full">
-    <div class="card preset-outlined-secondary-500 h-9/10">
+    <div class="card h-9/10">
     <DiceCard name={nameS}></DiceCard>
     </div>
     <div class="flex flex-col items-center justify-cente h-1/10">
-    <button onclick={cardButtonPressed} class="btn preset-tonal-tertiary">Roll</button>
+    <button onclick={cardButtonPressed} class="btn preset-tonal-tertiary h-full w-full">Roll</button>
     </div>
 </div>
 

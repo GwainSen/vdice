@@ -2,6 +2,6 @@
 	let { name = 'world' } = $props();
 </script>
 
-<div class="card">
+<div class="card preset-outlined-secondary-500 h-full">
     {name}
 </div>
