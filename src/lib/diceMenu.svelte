@@ -4,7 +4,6 @@
 	import DiceSlot from '$lib/diceSlot.svelte';
 
     function roll_pressed (){
-		console.log("pressed")
 		invoke('custom_console_log',{msg: "Roll All"})
 	}
 </script>

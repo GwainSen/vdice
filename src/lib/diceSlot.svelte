@@ -5,10 +5,15 @@
 
     let { nameS = 'world' } = $props();
 
-    var last_roll = $state(20)
+    var last_roll = $state("20")
+
+    function roll_dice_x(){
+        invoke('my_custom_command', {dice: nameS}).then((helper) => last_roll = helper);
+    }
 
     function cardButtonPressed(){
-        invoke('custom_console_log',{msg: nameS})
+        invoke('custom_console_log',{msg: nameS});
+        roll_dice_x()
     }
 </script>
 
@@ -29,7 +34,9 @@
             <div class="h-9/100 w-30/100"> <!--dice roll-->
                 <div class="card preset-tonal-tertiary h-full w-full">
                     <div class="flex flex-col items-center h-full">
-                        {last_roll}
+                        {#key last_roll}
+                            {last_roll}
+                        {/key}
                     </div>
                 </div>
             </div>     
