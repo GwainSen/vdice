@@ -1,5 +1,6 @@
 <script lang="ts">
-	import DiceMenu from "$lib/diceMenu.svelte";
+	import DiceMenu from "$lib/diceMenu/diceMenu.svelte";
+	import DiceBuilder from "$lib/diceBuilder/diceBuilder.svelte";
 
 	var current_menu = $state("Preset")
 
@@ -30,7 +31,7 @@
 		{:else if current_menu==="Preset_Editor"}
 			<div>preset editor</div>
 		{:else if current_menu==="Dice_Builder"}
-			<div>dice builder</div>
+			<DiceBuilder/>
 		{/if}
 	</div>
 

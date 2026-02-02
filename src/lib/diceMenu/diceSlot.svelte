@@ -1,7 +1,7 @@
 <script>
     import { invoke } from '@tauri-apps/api/core';
 
-    import DiceCard from "./diceCard.svelte";
+    import DiceCard from './diceCard.svelte';
 
     let { nameS = 'world' } = $props();
 

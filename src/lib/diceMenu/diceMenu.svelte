@@ -1,7 +1,7 @@
 <script>
     import { invoke } from '@tauri-apps/api/core';
 
-	import DiceSlot from '$lib/diceSlot.svelte';
+	import DiceSlot from '$lib/diceMenu/diceSlot.svelte';
 
     function roll_pressed (){
 		invoke('custom_console_log',{msg: "Roll All"})
