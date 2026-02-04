@@ -1,7 +1,13 @@
-# Tauri + SvelteKit + TypeScript
+# VDice
 
-This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
+ <font color="red">In early Development</font>
 
-## Recommended IDE Setup
+## Version: 0.1.0
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+VDice is a app for players of RPGs to use as a substitute for real dice. It offers customizable dice, as well as the option to configure dice sets to roll at once.
+
+
+Tech Stack:
+- Tauri <https://tauri.app>
+- Svelte <https://svelte.dev/>
+- Skeleton <https://www.skeleton.dev/>
