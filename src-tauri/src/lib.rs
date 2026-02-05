@@ -10,20 +10,27 @@ fn custom_console_log(msg: String){
 #[tauri::command]
 fn my_custom_command(dice: String) -> String {
     json_data::read_simple_dice();
+    
     if dice == "D2" {
         "2".into()
     }
     else {
         "10".into()
     }
-   
 }
+
+#[tauri::command]
+fn create_simple_dice(name: &str, sides : &str){
+    let _ = json_data::write_simple_dice(name, sides.parse().unwrap());
+    println!("{}",name);
+}
+
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![custom_console_log, my_custom_command])
+        .invoke_handler(tauri::generate_handler![custom_console_log, my_custom_command,create_simple_dice])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

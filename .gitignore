@@ -11,3 +11,5 @@ vite.config.ts.timestamp-*
 /.vscode
 package-lock.json
 
+#folder for dices/presets
+/lib

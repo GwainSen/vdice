@@ -1,5 +1,5 @@
 <script lang="ts">
-
+    import SimpleDice from "./simpleDice.svelte";
     var current_menu = $state("Simple_Dice")
 
     function changeMenu(newMenu: string){
@@ -19,7 +19,7 @@
 		</nav>
 	</div>
     {#if current_menu ==="Simple_Dice"}
-        <div>Simple Dice</div>
+        <SimpleDice/>
     {:else if current_menu === "WIP"}
         <div>WIP</div>
     {/if}
